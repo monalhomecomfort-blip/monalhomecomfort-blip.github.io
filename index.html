@@ -5,105 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mōnal — Ароматика для дому</title>
 
+    <!-- Нові шрифти -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: "Helvetica Neue", Arial, sans-serif;
             background: #faf9f6;
             color: #333;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        /* TOP NAVIGATION */
+        /* MENU */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            padding: 14px 40px;
+            padding: 16px 40px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 32px;
-            background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blur(8px);
+            gap: 40px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(10px);
             z-index: 10;
         }
 
         nav a {
             text-decoration: none;
-            font-size: 15px;
-            letter-spacing: 1px;
-            color: #555;
-            text-transform: uppercase;
+            font-size: 14px;
+            color: #444;
+            letter-spacing: 1.5px;
             font-weight: 300;
             transition: 0.25s;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            color: #222;
+            color: #111;
         }
 
         /* HERO SECTION */
         .hero {
             height: 100vh;
-            background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1350&q=80')
+            background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1350&q=80') 
                         center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
             padding-top: 70px;
         }
 
         .hero-overlay {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(8px);
+            padding: 50px 60px;
+            border-radius: 20px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.55);
-            padding: 40px 50px;
-            border-radius: 18px;
-            backdrop-filter: blur(6px);
         }
 
+        /* LOGO */
         .brand-logo {
-            font-size: 80px;
-            font-weight: 200;
-            letter-spacing: 8px;
+            font-family: 'Playfair Display', serif;
+            font-size: 82px;
+            font-weight: 300;
+            color: #2c2c2c;
+            letter-spacing: 6px;
             margin: 0;
-            font-family: "Georgia", serif;
         }
 
+        /* TAGLINE */
         .brand-subtitle {
+            margin-top: 12px;
+            margin-bottom: 40px;
             font-size: 22px;
             font-weight: 300;
             letter-spacing: 1px;
             color: #444;
-            margin-top: 10px;
-            margin-bottom: 40px;
         }
 
+        /* BUTTON */
         .btn {
             display: inline-block;
             padding: 16px 34px;
+            background: #e7e4d9;
             border-radius: 40px;
-            background: #e0dcd0;
             color: #333;
-            text-decoration: none;
             font-size: 18px;
-            font-weight: 400;
+            text-decoration: none;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: #d0c9b7;
+            background: #d8d2c2;
         }
 
         footer {
-            margin-top: 60px;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
             background: #f0efea;
             color: #777;
-            font-size: 14px;
+            margin-top: 40px;
         }
     </style>
 </head>
