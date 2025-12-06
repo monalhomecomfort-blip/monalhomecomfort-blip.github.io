@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — Mōnal</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: #faf9f6;
+            color: #333;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(8px);
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #555;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: 0.25s;
+        }
+
+        nav a:hover {
+            color: #222;
+        }
+
+        .container {
+            padding: 120px 40px 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .category {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .category:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .category img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .category-title {
+            padding: 18px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+            background: #f0efea;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="#">Про бренд</a>
+    <a href="#">Контакти</a>
+</nav>
+
+<div class="container">
+    <h1>Каталог продукції Mōnal</h1>
+
+    <div class="grid">
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Аромадифузори</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a5c1a2fb?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Парфуми для дому</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1495805442091-3478ec2f35e1?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Ароматизатори для авто</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Мило та креми</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Аромасвічки</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1556229007-17f69e5b2b31?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Подарункові набори</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1505232070786-2f3403f7f41d?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Подарункові сертифікати</div>
+        </a>
+
+        <a class="category" href="#">
+            <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=70" alt="">
+            <div class="category-title">Аромасаше</div>
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    © 2025 Mōnal — Ароматика для дому
+</footer>
+
+</body>
+</html>
