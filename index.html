@@ -14,6 +14,36 @@
             color: #333;
         }
 
+        /* TOP NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(8px);
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #555;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: 0.25s;
+        }
+
+        nav a:hover {
+            color: #222;
+        }
+
         /* HERO SECTION */
         .hero {
             height: 100vh;
@@ -23,6 +53,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            padding-top: 70px; /* щоб не заходило під меню */
         }
 
         .hero-overlay {
@@ -38,3 +69,67 @@
             font-weight: 200;
             letter-spacing: 8px;
             margin: 0;
+            font-family: "Georgia", serif;
+        }
+
+        .brand-subtitle {
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #444;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            padding: 16px 34px;
+            border-radius: 40px;
+            background: #e0dcd0;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #d0c9b7;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            background: #f0efea;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#">Головна</a>
+    <a href="#">Каталог</a>
+    <a href="#">Про бренд</a>
+    <a href="#">Контакти</a>
+</nav>
+
+<header class="hero">
+    <div class="hero-overlay">
+        <h1 class="brand-logo">Mōnal</h1>
+        <p class="brand-subtitle">Природа у твоєму просторі</p>
+        <a href="#" class="btn">Перейти в каталог</a>
+    </div>
+</header>
+
+<footer>
+    © 2025 Mōnal — Ароматика для дому
+</footer>
+
+</body>
+</html>
