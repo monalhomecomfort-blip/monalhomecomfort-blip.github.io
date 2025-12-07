@@ -240,3 +240,20 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* ===================== FIX HORIZONTAL SCROLL ===================== */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+/* Chrome blur overflow fix */
+.hero-overlay {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Prevent any element from exceeding screen width */
+img, .hero, .hero-overlay {
+    max-width: 100%;
+}
