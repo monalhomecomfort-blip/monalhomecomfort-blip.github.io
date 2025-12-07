@@ -1,6 +1,12 @@
 /* Шрифти */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap');
 
+/* ===== Загальні ===== */
+
+html, body {
+    overflow-x: hidden; /* Прибрати горизонтальну прокрутку */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -34,7 +40,7 @@ nav {
 }
 
 .nav-logo {
-    height: 32px;   /* Акуратний розмір — як кнопки меню */
+    height: 32px;   /* акуратний розмір */
     width: auto;
     display: block;
 }
@@ -62,14 +68,16 @@ nav {
 /* ===================== HERO ===================== */
 
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* заміна height: 100vh для уникнення скролу */
+    height: auto;
     background: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1350&q=80')
                 center/cover no-repeat;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 120px;  /* комфортний відступ */
+    padding-bottom: 60px;
 }
 
 .hero-overlay {
@@ -85,10 +93,14 @@ nav {
     gap: 12px;
 
     text-align: center;
+
+    /* Fix blur багу Chrome */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .hero-logo {
-    width: 460px;      /* Розмір як твій попередній текстовий заголовок */
+    width: 460px; 
     display: block;
 }
 
@@ -210,6 +222,7 @@ footer {
 .back-btn.secondary {
     background: #f0efe8;
 }
+
 .back-btn.secondary:hover {
     background: #e2e0d7;
 }
