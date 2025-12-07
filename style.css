@@ -194,9 +194,15 @@ footer {
     font-weight: 300;
 }
 
+.back-buttons {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+/* Основна кнопка */
 .back-btn {
     display: inline-block;
-    margin-bottom: 30px;
     padding: 12px 28px;
     background: #e7e4d9;
     border-radius: 40px;
@@ -205,8 +211,18 @@ footer {
     letter-spacing: 1px;
     text-decoration: none;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .back-btn:hover {
     background: #d8d2c2;
+}
+
+/* Додаткова кнопка */
+.back-btn.secondary {
+    background: #f0efe8;
+}
+
+.back-btn.secondary:hover {
+    background: #e2e0d7;
 }
