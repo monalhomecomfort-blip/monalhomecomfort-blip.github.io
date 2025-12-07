@@ -177,14 +177,14 @@ footer {
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 140px;
     width: auto;
 }
 
 
 /* --- ЛОГО В HERO --- */
 .hero-logo {
-    width: 260px;          /* збільшене */
+    width: 460px;          /* збільшене */
     margin: 0 auto 20px;   /* по центру */
     display: block;
     text-align: center;
