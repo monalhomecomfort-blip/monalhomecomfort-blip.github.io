@@ -193,3 +193,20 @@ footer {
     text-align: center;
     font-weight: 300;
 }
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 28px;
+    background: #e7e4d9;
+    border-radius: 40px;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #d8d2c2;
+}
