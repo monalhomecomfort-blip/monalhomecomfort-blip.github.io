@@ -4,103 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог — Mōnal</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            background: #faf9f6;
-            color: #333;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 14px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 32px;
-            background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blur(8px);
-            z-index: 10;
-        }
-
-        nav a {
-            text-decoration: none;
-            font-size: 15px;
-            letter-spacing: 1px;
-            color: #555;
-            text-transform: uppercase;
-            font-weight: 300;
-            transition: 0.25s;
-        }
-
-        nav a:hover {
-            color: #222;
-        }
-
-        .container {
-            padding: 120px 40px 60px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 42px;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 30px;
-        }
-
-        .category {
-            background: white;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-            text-decoration: none;
-            color: #333;
-            transition: 0.3s;
-        }
-
-        .category:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-        }
-
-        .category img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-        }
-
-        .category-title {
-            padding: 18px;
-            font-size: 20px;
-            letter-spacing: 1px;
-            text-align: center;
-            font-weight: 300;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding: 20px;
-            text-align: center;
-            background: #f0efea;
-            color: #777;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -113,32 +17,28 @@
 </nav>
 
 <div class="container">
-    <h1>Каталог продукції Mōnal</h1>
+    <h1>Каталог</h1>
 
-    <div class="grid">
+    <div class="subgrid">
 
-        <!-- 1. ДІМ -->
-        <a class="category" href="home.html">
-            <img src="images/1дім_каталог.jpg" alt="Категорія Дім">
-            <div class="category-title">Дім</div>
+        <a class="subcategory" href="home.html">
+            <img src="images/1дім_каталог.jpg">
+            <div class="subcategory-title">Дім</div>
         </a>
 
-        <!-- 2. ДОГЛЯД -->
-        <a class="category" href="care.html">
-            <img src="images/1догляд_каталог.jpg" alt="Категорія Догляд">
-            <div class="category-title">Догляд</div>
+        <a class="subcategory" href="care.html">
+            <img src="images/1догляд_каталог.jpg">
+            <div class="subcategory-title">Догляд</div>
         </a>
 
-        <!-- 3. САШЕ -->
-        <a class="category" href="sachets.html">
-            <img src="images/1саше_каталог.jpg" alt="Категорія Саше">
-            <div class="category-title">Саше</div>
+        <a class="subcategory" href="sachets.html">
+            <img src="images/1саше_каталог.jpg">
+            <div class="subcategory-title">Саше</div>
         </a>
 
-        <!-- 4. ПОДАРУНКИ -->
-        <a class="category" href="gifts.html">
-            <img src="images/1подарунки_каталог.JPG" alt="Категорія Подарунки">
-            <div class="category-title">Подарунки</div>
+        <a class="subcategory" href="gifts.html">
+            <img src="images/1подарунки_каталог.JPG">
+            <div class="subcategory-title">Подарунки</div>
         </a>
 
     </div>
