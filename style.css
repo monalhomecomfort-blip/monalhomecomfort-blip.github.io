@@ -404,3 +404,22 @@ img, .hero, .hero-overlay {
         transform: translateY(0);
     }
 }
+
+/* Соцмережі у футері */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+}
+
+.social-links img:hover {
+    opacity: 0.7;
+}
