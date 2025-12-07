@@ -167,3 +167,38 @@ footer {
     background: #f0efea;
     margin-top: 40px;
 }
+
+/* ЛОГО В МЕНЮ */
+.nav-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* ЛОГО В HERO */
+.hero-logo {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* ЛОГО У ФУТЕРІ */
+.footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 100%;
+}
