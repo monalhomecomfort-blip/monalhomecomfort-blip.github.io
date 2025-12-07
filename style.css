@@ -405,21 +405,19 @@ img, .hero, .hero-overlay {
     }
 }
 
-/* Соцмережі у футері */
-.social-links {
+/* ===================== СОЦІАЛЬНІ ІКОНКИ ===================== */
+
+.social-block {
+    margin: 12px 0;
     display: flex;
     justify-content: center;
-    gap: 18px;
-    margin-bottom: 10px;
+    gap: 18px; /* відстань між іконками */
 }
 
-.social-links img {
-    width: 40px;
+.social-block img {
+    width: 40px;     /* розмір іконок */
     height: 40px;
     object-fit: contain;
-    transition: opacity 0.2s ease;
-}
-
-.social-links img:hover {
-    opacity: 0.7;
+    display: block;
+    filter: none;    /* прибрати сірість, якщо браузер накладе */
 }
