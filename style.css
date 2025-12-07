@@ -137,3 +137,79 @@ footer {
 .footer-logo img {
     width: 100%;
 }
+
+/* ===================== КОНТЕЙНЕР ===================== */
+
+.container {
+    padding: 120px 40px 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===================== СІТКА КАТАЛОГУ ===================== */
+
+.subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    justify-items: center;
+}
+
+.subcategory {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    width: 240px;
+}
+
+.subcategory:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.subcategory img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.subcategory-title {
+    padding: 16px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* ===================== КНОПКИ НАЗАД ===================== */
+
+.back-buttons {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    background: #e7e4d9;
+    color: #333;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #d8d2c2;
+}
+
+.back-btn.secondary {
+    background: #f0efe8;
+}
+.back-btn.secondary:hover {
+    background: #e2e0d7;
+}
