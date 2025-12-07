@@ -168,24 +168,26 @@ footer {
     margin-top: 40px;
 }
 
-/* ЛОГО В МЕНЮ */
+/* --- ЛОГО В МЕНЮ --- */
 .nav-logo {
-    height: 40px;
-    width: auto;
-    margin-right: 30px;
     display: flex;
     align-items: center;
+    height: 50px;
+    margin-right: 30px;
 }
 
 .nav-logo img {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
-/* ЛОГО В HERO */
+
+/* --- ЛОГО В HERO --- */
 .hero-logo {
-    width: 220px;
-    margin-bottom: 20px;
+    width: 260px;          /* збільшене */
+    margin: 0 auto 20px;   /* по центру */
+    display: block;
+    text-align: center;
 }
 
 .hero-logo img {
@@ -193,12 +195,14 @@ footer {
     height: auto;
 }
 
-/* ЛОГО У ФУТЕРІ */
+
+/* --- ЛОГО В ФУТЕРІ --- */
 .footer-logo {
-    width: 120px;
-    margin-bottom: 10px;
+    width: 140px;
+    margin: 0 auto 10px; /* центрування */
 }
 
 .footer-logo img {
     width: 100%;
+    height: auto;
 }
