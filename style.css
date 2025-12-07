@@ -257,3 +257,52 @@ html, body {
 img, .hero, .hero-overlay {
     max-width: 100%;
 }
+
+/* ===================== ABOUT PAGE ===================== */
+
+.about-container {
+    padding: 120px 40px 60px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: #555;
+}
+
+.about-title {
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+}
+
+.about-block {
+    margin-top: 20px;
+    background: #ffffffd9; /* легка текстура */
+    backdrop-filter: blur(4px);
+    padding: 24px 30px;
+    border-radius: 16px;
+    line-height: 1.7;
+    color: #444;
+    font-size: 17px;
+    font-weight: 300;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
