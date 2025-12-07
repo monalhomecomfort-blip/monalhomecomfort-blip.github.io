@@ -160,6 +160,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 28px;
     margin-top: 40px;
+    justify-items: center;        /* ЦЕНТРУЄ плитки */
 }
 
 .subcategory {
