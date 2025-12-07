@@ -195,11 +195,20 @@ footer {
     height: auto;
 }
 
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px; /* проміжок між логотипом, текстом і кнопкою */
+}
+
 
 /* --- ЛОГО В ФУТЕРІ --- */
 .footer-logo {
     width: 140px;
-    margin: 0 auto 10px; /* центрування */
+    margin: 0 auto 2px; /* центрування */
+    padding: 0;
 }
 
 .footer-logo img {
