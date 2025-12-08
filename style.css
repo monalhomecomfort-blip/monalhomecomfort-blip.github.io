@@ -115,7 +115,7 @@ nav {
 
 /* Анімація 7 фонів */
 @keyframes bgCycle {
-    0%   { background-image: url('images/hero-bg/bg1.jpg'); }
+    0%   { background-image: url('images/background/bg1.jpg'); }
     14%  { background-image: url('images/hero-bg/bg1.jpg'); }
 
     15%  { background-image: url('images/hero-bg/bg2.jpg'); }
