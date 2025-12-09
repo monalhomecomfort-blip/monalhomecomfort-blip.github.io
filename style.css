@@ -93,7 +93,7 @@ nav {
 /* Контейнер hero */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     padding-top: 120px;
     padding-bottom: 60px;
 
