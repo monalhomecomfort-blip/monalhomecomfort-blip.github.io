@@ -103,7 +103,7 @@ nav {
     color: #111;
 }
 
-/* ===================== HERO (анімація фону) ===================== */
+/* ===================== HERO (fade-слайдер на 7 фото) ===================== */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -115,72 +115,40 @@ nav {
     justify-content: center;
 
     overflow: hidden;
-
-    background-size: cover;
-    background-position: center;
-    animation: bgCycle 42s ease-in-out infinite;
 }
 
-/* 7 фонів: images/backgrounds/bg1.jpg ... bg7.jpg */
-@keyframes bgCycle {
-    0%   { background-image: url('images/backgrounds/bg1.jpg'); }
-    14%  { background-image: url('images/backgrounds/bg1.jpg'); }
-
-    15%  { background-image: url('images/backgrounds/bg2.jpg'); }
-    28%  { background-image: url('images/backgrounds/bg2.jpg'); }
-
-    29%  { background-image: url('images/backgrounds/bg3.jpg'); }
-    42%  { background-image: url('images/backgrounds/bg3.jpg'); }
-
-    43%  { background-image: url('images/backgrounds/bg4.jpg'); }
-    56%  { background-image: url('images/backgrounds/bg4.jpg'); }
-
-    57%  { background-image: url('images/backgrounds/bg5.jpg'); }
-    70%  { background-image: url('images/backgrounds/bg5.jpg'); }
-
-    71%  { background-image: url('images/backgrounds/bg6.jpg'); }
-    84%  { background-image: url('images/backgrounds/bg6.jpg'); }
-
-    85%  { background-image: url('images/backgrounds/bg7.jpg'); }
-    100% { background-image: url('images/backgrounds/bg7.jpg'); }
-}
-
-/* Білий напівпрозорий шар для плавної зміни */
-.fade-overlay {
+/* Один фон = один .bg-slide */
+.bg-slide {
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    z-index: 1;
-    animation: fadeOverlay 42s ease-in-out infinite;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeSequence 49s infinite;
 }
 
-@keyframes fadeOverlay {
-    0%, 10%   { opacity: 0.6; }
-    14%       { opacity: 0.0; }  /* bg1 */
+/* Кожне фото зміщується на 7 секунд */
+.hero .bg-slide:nth-child(1) { animation-delay: 0s; }
+.hero .bg-slide:nth-child(2) { animation-delay: 7s; }
+.hero .bg-slide:nth-child(3) { animation-delay: 14s; }
+.hero .bg-slide:nth-child(4) { animation-delay: 21s; }
+.hero .bg-slide:nth-child(5) { animation-delay: 28s; }
+.hero .bg-slide:nth-child(6) { animation-delay: 35s; }
+.hero .bg-slide:nth-child(7) { animation-delay: 42s; }
 
-    15%, 24%  { opacity: 0.6; }
-    28%       { opacity: 0.0; }  /* bg2 */
-
-    29%, 38%  { opacity: 0.6; }
-    42%       { opacity: 0.0; }  /* bg3 */
-
-    43%, 52%  { opacity: 0.6; }
-    56%       { opacity: 0.0; }  /* bg4 */
-
-    57%, 66%  { opacity: 0.6; }
-    70%       { opacity: 0.0; }  /* bg5 */
-
-    71%, 80%  { opacity: 0.6; }
-    84%       { opacity: 0.0; }  /* bg6 */
-
-    85%, 95%  { opacity: 0.6; }
-    100%      { opacity: 0.0; }  /* bg7 */
+/* Плавне затемнення/проявляння */
+@keyframes fadeSequence {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    20%  { opacity: 1; }
+    25%  { opacity: 0; }
+    100% { opacity: 0; }
 }
 
+/* Поверх слайдів — твій контент */
 .hero-overlay {
     position: relative;
-    z-index: 2;
+    z-index: 10;
 
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(8px);
@@ -226,7 +194,7 @@ nav {
     background: #d8d2c2;
 }
 
-/* Легка поява hero-блоку */
+/* Легка поява hero-контенту */
 .fade {
     opacity: 0;
     transform: translateY(20px);
