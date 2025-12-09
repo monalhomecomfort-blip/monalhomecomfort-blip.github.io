@@ -104,7 +104,7 @@ nav {
     overflow: hidden;
 }
 
-/* Шар з фонами */
+/* Шар з фонами — ПРАЦЮЄ ЛИШЕ НА ГОЛОВНІЙ */
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -121,49 +121,15 @@ nav {
     animation: slideShow 56s infinite ease-in-out;
 }
 
-/* Кожному слайду — своя картинка + delay */
-.bg-slide.s1 {
-    background-image: url('images/backgrounds/bg1.jpg');
-    animation-delay: 0s;
-}
+.bg-slide.s1 { background-image: url('images/backgrounds/bg1.jpg'); animation-delay: 0s; }
+.bg-slide.s2 { background-image: url('images/backgrounds/bg2.jpg'); animation-delay: 8s; }
+.bg-slide.s3 { background-image: url('images/backgrounds/bg3.jpg'); animation-delay: 16s; }
+.bg-slide.s4 { background-image: url('images/backgrounds/bg4.jpg'); animation-delay: 24s; }
+.bg-slide.s5 { background-image: url('images/backgrounds/bg5.jpg'); animation-delay: 32s; }
+.bg-slide.s6 { background-image: url('images/backgrounds/bg6.jpg'); animation-delay: 40s; }
+.bg-slide.s7 { background-image: url('images/backgrounds/bg7.jpg'); animation-delay: 48s; }
 
-.bg-slide.s2 {
-    background-image: url('images/backgrounds/bg2.jpg');
-    animation-delay: 8s;
-}
-
-.bg-slide.s3 {
-    background-image: url('images/backgrounds/bg3.jpg');
-    animation-delay: 16s;
-}
-
-.bg-slide.s4 {
-    background-image: url('images/backgrounds/bg4.jpg');
-    animation-delay: 24s;
-}
-
-.bg-slide.s5 {
-    background-image: url('images/backgrounds/bg5.jpg');
-    animation-delay: 32s;
-}
-
-.bg-slide.s6 {
-    background-image: url('images/backgrounds/bg6.jpg');
-    animation-delay: 40s;
-}
-
-.bg-slide.s7 {
-    background-image: url('images/backgrounds/bg7.jpg');
-    animation-delay: 48s;
-}
-
-/* Ключові кадри fade-ефекту:
-   0–5%   — плавне виникнення
-   5–15%  — видимий стан
-   15–20% — плавне згасання
-   20–100% — слайд невидимий
-   Завдяки delay це все зсувається для кожного з 7 фото
-*/
+/* Fade анімація */
 @keyframes slideShow {
     0%   { opacity: 0; }
     5%   { opacity: 1; }
@@ -192,14 +158,8 @@ nav {
 }
 
 /* Логотип у hero */
-.hero-logo {
-    width: 460px;
-}
-
-.hero-logo img {
-    width: 100%;
-    height: auto;
-}
+.hero-logo { width: 460px; }
+.hero-logo img { width: 100%; height: auto; }
 
 /* Підзаголовок */
 .brand-subtitle {
@@ -221,10 +181,7 @@ nav {
     letter-spacing: 1px;
     transition: 0.3s;
 }
-
-.btn:hover {
-    background: #d8d2c2;
-}
+.btn:hover { background: #d8d2c2; }
 
 /* Плавна поява hero-блоку */
 .fade {
@@ -232,38 +189,31 @@ nav {
     transform: translateY(20px);
     animation: fadeIn 0.9s ease-out forwards;
 }
-
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===================== FOOTER ===================== */
+/* ===================== FOOTER (СКЛЯНИЙ) ===================== */
 
 footer {
     text-align: center;
     padding: 20px 0 24px 0;
 
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.30);   /* Посилена прозорість */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     color: #555;
-    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -4px 22px rgba(0, 0, 0, 0.07);
 
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .footer-logo {
     width: 120px;
     margin: 0 auto 4px;
 }
-
-.footer-logo img {
-    width: 100%;
-}
+.footer-logo img { width: 100%; }
 
 /* Соцмережі */
 .social-block {
@@ -272,7 +222,6 @@ footer {
     justify-content: center;
     gap: 18px;
 }
-
 .social-block img {
     width: 40px;
     height: 40px;
@@ -286,6 +235,7 @@ footer {
     padding: 120px 40px 60px;
     max-width: 1200px;
     margin: auto;
+    min-height: calc(100vh - 200px);   /* ДОДАНО ДЛЯ ПРИЛИПАННЯ ФУТЕРА */
 }
 
 /* ===================== КАТАЛОГ / ПЛИТКИ ===================== */
@@ -343,7 +293,6 @@ footer {
     color: #333;
     transition: 0.3s;
 }
-
 .back-btn:hover { background: #d8d2c2; }
 
 .back-btn.secondary { background: #f0efe8; }
@@ -399,15 +348,9 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Адаптив about */
 @media (max-width: 768px) {
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-block.big {
-        grid-column: span 1;
-    }
+    .about-container { grid-template-columns: 1fr; }
+    .about-block.big { grid-column: span 1; }
 }
 
 /* ===================== КОНТАКТИ ===================== */
