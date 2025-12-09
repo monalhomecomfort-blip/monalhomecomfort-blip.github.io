@@ -244,9 +244,16 @@ nav {
 
 footer {
     text-align: center;
-    padding: 10px 0 12px 0;
-    background: #f0efea;
-    color: #777;
+    padding: 20px 0 24px 0;
+
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    color: #555;
+    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.06);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .footer-logo {
