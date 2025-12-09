@@ -161,6 +161,8 @@ nav {
 
     border-radius: 20px;
     text-align: center;
+
+    overflow: hidden; /* ← ВЕРНУТИ ОБОВʼЯЗКОВО */
 }
 
 .hero-logo {
