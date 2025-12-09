@@ -55,8 +55,9 @@ nav {
 }
 
 .nav-social img {
-    height: 24px;
-    width: auto;
+    height: 24px !important;
+    width: auto !important;
+    display: block;
     opacity: 0.8;
     transition: 0.25s;
 }
