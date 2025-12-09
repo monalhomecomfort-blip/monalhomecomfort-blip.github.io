@@ -17,14 +17,8 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Щоб картинки не вилазили */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* ===================== НАВІГАЦІЯ ===================== */
+
 nav {
     position: fixed;
     top: 0;
@@ -42,6 +36,7 @@ nav {
     z-index: 10;
 }
 
+/* Лівий блок з логотипом */
 .nav-left {
     display: flex;
     align-items: center;
@@ -53,13 +48,30 @@ nav {
     display: block;
 }
 
-/* Варіант для сторінок з .nav-links (каталог, дім тощо) */
+/* Центр (Головна / Каталог / Про бренд / Контакти) */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Праворуч (Доставка / Кошик) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Для сторінок, де ще використовується .nav-links (каталог, підкатегорії) */
 .nav-links {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
+/* Стиль посилань меню */
+.nav-center a,
+.nav-right a,
 .nav-links a {
     text-decoration: none;
     font-size: 14px;
@@ -70,40 +82,15 @@ nav {
     transition: 0.25s;
 }
 
+.nav-center a:hover,
+.nav-right a:hover,
 .nav-links a:hover {
     color: #111;
 }
 
-/* Вариант для index.html: .nav-center + .nav-right */
-.nav-center {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.nav-center a,
-.nav-right a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #444;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-    text-transform: uppercase;
-    transition: 0.25s;
-}
-
-.nav-center a:hover,
-.nav-right a:hover {
-    color: #111;
-}
-
 /* ===================== HERO (fade-слайдер на 7 фото) ===================== */
+
+/* Контейнер hero */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -117,38 +104,78 @@ nav {
     overflow: hidden;
 }
 
-/* Один фон = один .bg-slide */
+/* Шар з фонами */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Одна слайд-картинка */
 .bg-slide {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: fadeSequence 49s infinite;
+    animation: slideShow 56s infinite ease-in-out;
 }
 
-/* Кожне фото зміщується на 7 секунд */
-.hero .bg-slide:nth-child(1) { animation-delay: 0s; }
-.hero .bg-slide:nth-child(2) { animation-delay: 7s; }
-.hero .bg-slide:nth-child(3) { animation-delay: 14s; }
-.hero .bg-slide:nth-child(4) { animation-delay: 21s; }
-.hero .bg-slide:nth-child(5) { animation-delay: 28s; }
-.hero .bg-slide:nth-child(6) { animation-delay: 35s; }
-.hero .bg-slide:nth-child(7) { animation-delay: 42s; }
+/* Кожному слайду — своя картинка + delay */
+.bg-slide.s1 {
+    background-image: url('images/backgrounds/bg1.jpg');
+    animation-delay: 0s;
+}
 
-/* Плавне затемнення/проявляння */
-@keyframes fadeSequence {
+.bg-slide.s2 {
+    background-image: url('images/backgrounds/bg2.jpg');
+    animation-delay: 8s;
+}
+
+.bg-slide.s3 {
+    background-image: url('images/backgrounds/bg3.jpg');
+    animation-delay: 16s;
+}
+
+.bg-slide.s4 {
+    background-image: url('images/backgrounds/bg4.jpg');
+    animation-delay: 24s;
+}
+
+.bg-slide.s5 {
+    background-image: url('images/backgrounds/bg5.jpg');
+    animation-delay: 32s;
+}
+
+.bg-slide.s6 {
+    background-image: url('images/backgrounds/bg6.jpg');
+    animation-delay: 40s;
+}
+
+.bg-slide.s7 {
+    background-image: url('images/backgrounds/bg7.jpg');
+    animation-delay: 48s;
+}
+
+/* Ключові кадри fade-ефекту:
+   0–5%   — плавне виникнення
+   5–15%  — видимий стан
+   15–20% — плавне згасання
+   20–100% — слайд невидимий
+   Завдяки delay це все зсувається для кожного з 7 фото
+*/
+@keyframes slideShow {
     0%   { opacity: 0; }
     5%   { opacity: 1; }
-    20%  { opacity: 1; }
-    25%  { opacity: 0; }
+    15%  { opacity: 1; }
+    20%  { opacity: 0; }
     100% { opacity: 0; }
 }
 
-/* Поверх слайдів — твій контент */
+/* Скляний блок поверх */
 .hero-overlay {
     position: relative;
-    z-index: 10;
+    z-index: 1;
 
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(8px);
@@ -160,17 +187,21 @@ nav {
     gap: 12px;
     align-items: center;
     max-width: 100%;
+    text-align: center;
     overflow: hidden;
 }
 
+/* Логотип у hero */
 .hero-logo {
     width: 460px;
 }
 
 .hero-logo img {
     width: 100%;
+    height: auto;
 }
 
+/* Підзаголовок */
 .brand-subtitle {
     margin: 8px 0 14px 0;
     font-size: 22px;
@@ -178,6 +209,7 @@ nav {
     color: #444;
 }
 
+/* Кнопка */
 .btn {
     display: inline-block;
     padding: 14px 34px;
@@ -194,7 +226,7 @@ nav {
     background: #d8d2c2;
 }
 
-/* Легка поява hero-контенту */
+/* Плавна поява hero-блоку */
 .fade {
     opacity: 0;
     transform: translateY(20px);
@@ -209,6 +241,7 @@ nav {
 }
 
 /* ===================== FOOTER ===================== */
+
 footer {
     text-align: center;
     padding: 10px 0 12px 0;
@@ -221,7 +254,11 @@ footer {
     margin: 0 auto 4px;
 }
 
-/* ===================== СОЦМЕРЕЖІ ===================== */
+.footer-logo img {
+    width: 100%;
+}
+
+/* Соцмережі */
 .social-block {
     margin: 12px 0;
     display: flex;
@@ -233,9 +270,11 @@ footer {
     width: 40px;
     height: 40px;
     object-fit: contain;
+    display: block;
 }
 
 /* ===================== КОНТЕЙНЕР ===================== */
+
 .container {
     padding: 120px 40px 60px;
     max-width: 1200px;
@@ -243,6 +282,7 @@ footer {
 }
 
 /* ===================== КАТАЛОГ / ПЛИТКИ ===================== */
+
 .subgrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -280,6 +320,7 @@ footer {
 }
 
 /* ===================== КНОПКИ НАЗАД ===================== */
+
 .back-buttons {
     display: flex;
     gap: 14px;
@@ -296,19 +337,13 @@ footer {
     transition: 0.3s;
 }
 
-.back-btn:hover {
-    background: #d8d2c2;
-}
+.back-btn:hover { background: #d8d2c2; }
 
-.back-btn.secondary {
-    background: #f0efe8;
-}
-
-.back-btn.secondary:hover {
-    background: #e2e0d7;
-}
+.back-btn.secondary { background: #f0efe8; }
+.back-btn.secondary:hover { background: #e2e0d7; }
 
 /* ===================== ABOUT PAGE ===================== */
+
 .about-container {
     padding: 120px 40px 60px;
     max-width: 1200px;
@@ -354,10 +389,7 @@ footer {
 .about-block:nth-child(6) { background: #e8ddd8 url('https://www.transparenttextures.com/patterns/satin-weave.png'); }
 
 @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Адаптив about */
@@ -372,6 +404,7 @@ footer {
 }
 
 /* ===================== КОНТАКТИ ===================== */
+
 .contact-columns {
     max-width: 900px;
     margin: 0 auto;
@@ -409,3 +442,10 @@ footer {
     }
 }
 
+/* ===================== ЗОБРАЖЕННЯ ===================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
