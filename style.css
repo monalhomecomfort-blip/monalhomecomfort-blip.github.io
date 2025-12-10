@@ -386,3 +386,42 @@ img {
     max-width: 100%;
     display: block;
 }
+
+/* ====== Доставка — 2 колонки ====== */
+
+.delivery-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.delivery-block {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 26px 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.delivery-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.delivery-block p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 780px) {
+    .delivery-columns {
+        grid-template-columns: 1fr;
+    }
+}
