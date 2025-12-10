@@ -10,9 +10,7 @@ html, body {
     overflow-x: hidden;
     background: transparent; /* ← ТАК! */
     color: #333;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
-    z-index: 1;
+    font-family: 'Montserrat', sans-serif;    
 }
 
 * {
