@@ -423,3 +423,15 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===================== ЛЕЙАУТ ДЛЯ СТОРІНОК З КОРОТКИМ КОНТЕНТОМ ===================== */
+
+.page-wrap {
+    min-height: 100vh;           /* висота екрану */
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrap .container {
+    flex: 1;                     /* контейнер розтягується, футер притискається вниз */
+}
