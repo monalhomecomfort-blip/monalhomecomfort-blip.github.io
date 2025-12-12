@@ -439,3 +439,15 @@ img {
 .page-wrap .container {
     flex: 1;                     /* контейнер розтягується, футер притискається вниз */
 }
+
+/* ЄДИНИЙ СТИЛЬ ДЛЯ ЗАГОЛОВКІВ СТОРІНОК (не ламає сітки) */
+.page-title{
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: #333;
+  margin: 0 0 24px 0;
+  text-transform: none;
+  text-align: left; /* якщо хочеш по центру — зміниш тільки тут */
+}
