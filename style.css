@@ -8,6 +8,10 @@ html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+
+    overflow-y: auto;              /* ← ДОДАНО */
+    overscroll-behavior: none;     /* ← ДОДАНО */
+
     background: transparent; /* ← ТАК! */
     color: #333;
     font-family: 'Montserrat', sans-serif;    
