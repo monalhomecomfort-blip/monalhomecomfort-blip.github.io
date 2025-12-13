@@ -525,7 +525,7 @@ img {
 
 .product-price {
     font-size: 22px;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
 }
 
 .product-text p {
@@ -541,7 +541,7 @@ img {
 }
 
 .buy-btn {
-    margin-top: 20px;
+    margin-top: 8px;
     padding: 14px 36px;
     border-radius: 40px;
     background: #e7e4d9;
