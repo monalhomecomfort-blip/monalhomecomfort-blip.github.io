@@ -473,11 +473,21 @@ img {
 /* ФОН */
 .product-bg {
     position: absolute;
-    inset: 0;
+    inset: -12%;                  /* запас для руху */
     z-index: 1;
     background-size: cover;
     background-position: center;
-    transition: transform 0.9s ease, filter 0.9s ease;
+
+    transform: translateY(0) scale(1);
+    transition:
+        transform 2.2s ease-out,
+        filter 2.2s ease-out;
+}
+
+/* LEVEL 1 — DEEP MICRO (як ми обговорювали раніше) */
+.micro-animate:hover .product-bg {
+    transform: translateY(-4%) scale(1.08);
+    filter: brightness(1.06) saturate(1.03);
 }
 
 /* ДИФУЗОР — СТАТИЧНИЙ */
@@ -519,10 +529,15 @@ img {
 }
 
 .product-text p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 14px;
-    color: #444;
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 12px;
+    color: #444;    
+}
+
+.product-text {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .buy-btn {
