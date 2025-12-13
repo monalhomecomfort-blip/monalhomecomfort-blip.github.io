@@ -462,24 +462,40 @@ img {
     margin: 80px 0;
 }
 
+/* MEDIA */
 .product-media {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    height: 520px;
 }
 
-.product-media img {
-    width: 100%;
-    display: block;
+/* ФОН */
+.product-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
     transition: transform 0.9s ease, filter 0.9s ease;
+    transform: scale(1);
 }
 
-/* МІКРОАНІМАЦІЯ */
-.micro-animate:hover img {
+/* ДИФУЗОР — СТАТИЧНИЙ */
+.product-diffuser {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* LEVEL 1 — MICRO */
+.micro-animate:hover .product-bg {
     transform: scale(1.06);
     filter: brightness(1.05);
 }
 
+/* TEXT */
 .product-title {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
@@ -521,3 +537,4 @@ img {
 .buy-btn:hover {
     background: #d8d2c2;
 }
+
