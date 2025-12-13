@@ -468,16 +468,17 @@ img {
     overflow: hidden;
     border-radius: 20px;
     height: 520px;
+    background: #000; /* ТИМЧАСОВО, щоб бачити фон */
 }
 
 /* ФОН */
 .product-bg {
     position: absolute;
     inset: 0;
+    z-index: 1; /* ← КЛЮЧ */
     background-size: cover;
     background-position: center;
     transition: transform 0.9s ease, filter 0.9s ease;
-    transform: scale(1);
 }
 
 /* ДИФУЗОР — СТАТИЧНИЙ */
